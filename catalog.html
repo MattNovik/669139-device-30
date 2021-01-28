@@ -11,7 +11,7 @@
     <!-- внёсё коммент для создания коммита, а дальше и пула, для ДЗ -->
     <a href="index.html" class="logo">
       <img src="img/catalog/header/-e-logo(1).svg" alt="" width="164" height="35">
-    </a> 
+    </a>
     <form action="url" class="search">
       <input type="text" placeholder="search">
     </form>
@@ -65,28 +65,47 @@
             фильтр:
           </div>
           <form class="criteria">
-            <!-- насколько я понял, сам фильтр мы не будем дорабатывать. Только разметка и стили, но form пока оставлю  -->
             <p class="price">Стоимость</p>
             <div class="price-range"></div>
-            <p class="color">Цвет</p>
-            <input type="checkbox" id="black" name="black" value="black-color" class="color-black" checked>
-            <label for="black">Черный</label>
-            <input type="checkbox" id="white" name="white" value="white-color" class="color-white">
-            <label for="white">Белый</label>
-            <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-blue" checked>
-            <label for="blue">Синий</label>
-            <input type="checkbox" id="red" name="red" value="red-color" class="color-red" checked>
-            <label for="red">Красный</label>
-            <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-pink">
-            <label for="pink">Розовый</label>
-            <p class="bluetooth">Bluetooth</p>
-            <input type="radio" class="bluetooth-yes" name="yes-no" value="yes" id="yes" checked>
-            <label for="yes">Есть</label>
-            <input type="radio" class="bluetooth-no" name="yes-no" value="no" id="no">
-            <label for="no">Нет</label>
-            <a href="#" class="show">Показать</a>
-            <!-- что лучше поставить здесь??
-            Input submit как для отправки формы или же достаточно будет пока ссылки? -->
+            <fieldset class="color">
+              <legend>Цвет</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" id="black" name="black" value="black-color" class="color-black" checked>
+                  <label for="black">Черный</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="white" name="white" value="white-color" class="color-white">
+                  <label for="white">Белый</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-blue" checked>
+                  <label for="blue">Синий</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="red" name="red" value="red-color" class="color-red" checked>
+                  <label for="red">Красный</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-pink">
+                  <label for="pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="bluetooth">
+              <legend>Bluetooth</legend>
+              <ul>
+                <li>
+                  <input type="radio" class="bluetooth-yes" name="yes-no" value="yes" id="yes" checked>
+                  <label for="yes">Есть</label>
+                </li>
+                <li>
+                  <input type="radio" class="bluetooth-no" name="yes-no" value="no" id="no">
+                  <label for="no">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <input type="submit" class="send-form">
           </form>
         </div>
         <div class="sort-products">
@@ -134,12 +153,12 @@
             </a>
           </div>
         </div>
-        <div class="pages">
+        <div class="pages-control">
           <span class="back">Назад</span>
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <li><button>1</button></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
           </ul>
           <span class="forward">вперед</span>
         </div>
