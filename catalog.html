@@ -10,7 +10,7 @@
   <header>
     <a href="index.html" class="logo">
       <img src="img/catalog/header/-e-logo(1).svg" alt="" width="164" height="35">
-    </a>
+    </a> 
     <form action="url" class="search">
       <input type="text" placeholder="search">
     </form>
@@ -48,19 +48,15 @@
         Моноподы для селфи
       </h1>
       <div class="steps">
-        <div class="first-step">
-          <a href="index.html">
-            Главная
-          </a>
-          <img src="https://via.placeholder.com/12x12" alt="" width="12" height="12" class="icon-arrow-nav">
-        </div>
-        <div class="second-step">
+        <a href="index.html">
+          Главная
+        </a>
+        <a href="#">
           Каталог товаров
-          <img src="https://via.placeholder.com/12x12" alt="" width="12" height="12" class="icon-arrow-nav">
-        </div>
-        <div class="third-step">
+        </a>
+        <a href="#">
           Моноподы для селфи
-        </div>
+        </a>
       </div>
       <div class="product-sort-filter">
         <div class="filter">
@@ -68,8 +64,28 @@
             фильтр:
           </div>
           <form class="criteria">
-            <label for="cost"></label>
-            <input type="range" class="cost" id="cost" min="0" max="20000">
+            <!-- насколько я понял, сам фильтр мы не будет дорабатывать. Только разметка и стили, но form пока оставлю  -->
+            <p class="price">Стоимость</p>
+            <div class="price-range"></div>
+            <p class="color">Цвет</p>
+            <input type="checkbox" id="black" name="black" value="black-color" class="color-black" checked>
+            <label for="black">Черный</label>
+            <input type="checkbox" id="white" name="white" value="white-color" class="color-white">
+            <label for="white">Белый</label>
+            <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-blue" checked>
+            <label for="blue">Синий</label>
+            <input type="checkbox" id="red" name="red" value="red-color" class="color-red" checked>
+            <label for="red">Красный</label>
+            <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-pink">
+            <label for="pink">Розовый</label>
+            <p class="bluetooth">Bluetooth</p>
+            <input type="radio" class="bluetooth-yes" name="yes-no" value="yes" id="yes" checked>
+            <label for="yes">Есть</label>
+            <input type="radio" class="bluetooth-no" name="yes-no" value="no" id="no">
+            <label for="no">Нет</label>
+            <a href="#" class="show">Показать</a>
+            <!-- что лучше поставить здесь??
+            Input submit как для отправки формы или же достаточно будет пока ссылки? -->
           </form>
         </div>
         <div class="sort-products">
@@ -77,35 +93,42 @@
       </div>
       <div class="products">
         <div class="products-head">
-          <!--надо решить как вставить сюда сортировк. Либо чекбосками, либо просто навесить JS !-->
+          <a href="#" class="by-price">
+            По цене
+          </a>
+          <a href="#" class="by-type">
+            По типу
+          </a>
+          <a href="#" class="by-prefer">
+            По популярности
+          </a>
         </div>
         <div class="wrapper-products">
-          <!-- всё таки table или div, а дальше гриды?!-->
           <div class="first-product">
             <a href="blank.html">
               <img src="img/catalog/main/item-1 1 res.png" alt="" width="380" height="381">
-              <span class="product-name">Любительская селфи-палка</span>
+              <h2 class="product-name">Любительская селфи-палка</h2>
               <span class="product-price">1 100 руб.</span>
             </a>
           </div>
           <div class="second-product">
             <a href="blank.html">
               <img src="img/catalog/main/item-2 1 (res).png" alt="" width="380" height="381">
-              <span class="product-name">Профессиональная селфи-палка </span>
+              <h2 class="product-name">Профессиональная селфи-палка </h2>
               <span class="product-price">1 500 руб.</span>
             </a>
           </div>
           <div class="third-product">
             <a href="blank.html">
               <img src="img/catalog/main/item-3 1 (1es).png" alt="" width="380" height="381">
-              <span class="product-name">Непотопляемая селфи-палка</span>
+              <h2 class="product-name">Непотопляемая селфи-палка</h2>
               <span class="product-price">1 500 руб.</span>
             </a>
           </div>
           <div class="fourth-product">
             <a href="blank.html">
               <img src="img/catalog/main/item-4 1 (res).png" alt="" width="380" height="381">
-              <span class="product-name">Селфи-палка «Следуй за мной»</span>
+              <h2 class="product-name">Селфи-палка «Следуй за мной»</h2>
               <span class="product-price">1 900 руб.</span>
             </a>
           </div>
@@ -156,17 +179,14 @@
         <ul>
           <li>
             <a href="#" class="fb">
-              <img src="img/index/footer/simple-icons_facebook.svg" alt="" width="32" height="32">
             </a>
           </li>
           <li>
             <a href="#" class="vk">
-              <img src="img/index/footer/icon_instagram.svg" alt="" width="32" height="32">
             </a>
           </li>
           <li>
             <a href="#" class="tw">
-              <img src="img/index/footer/icon_witter.svg" alt="" width="32" height="32">
             </a>
           </li>
         </ul>
