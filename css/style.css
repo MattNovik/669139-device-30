@@ -1,0 +1,266 @@
+/*Fonts*/
+@font-face {
+	font-family: "Gilroy-extra-bold";
+	src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+	url("../fonts/gilroyextrabold.woff") format("woff");
+	font-weight:800;
+	font-style:normal;
+}
+
+@font-face {
+	font-family: "Gilroy-light";
+	src: url("../fonts/gilroylight.woff2") format("woff2"),
+	url("../fonts/gilroylight.woff") format("woff");
+	font-weight:300;
+	font-style:normal;
+}
+
+@font-face {
+	font-family: "Opensans";
+	src: url("../fonts/opensans.woff2") format("woff2"),
+	url("../fonts/opensans.woff") format("woff");
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {
+	font-family: "Opensans-light";
+	src: url("../fonts/opensanslight.woff2") format("woff2"),
+	url("../fonts/opensanslight.woff") format("woff");
+	font-weight:300;
+	font-style:normal;
+}
+
+/*Variables*/
+:root {
+	--base-black:#000;
+	--base-graydarkest:#363636;
+	--base-darkgray:#464646;
+	--base-gray:#7e7e7e;
+	--base-ligthgray:#e5e5e5;
+	--base-white:#fff;
+
+	--alternate-yellow:#f0c52e;
+	--alternate-biege:#f7e296;
+	--alternate-green:#91c92f;
+
+	--state-pink:#f6dada;
+}
+/*main CSS*/
+
+body {
+	min-width:1160px;
+	padding:0;
+	margin:0;
+	font-family: "Gilroy-extra-bold", Arial, sans-serif;
+	font-size:18px;
+	line-height: 22px;
+	font-weight:800;
+	color:var(--base-black);
+	background-color: var(--base-white);
+}
+a {
+	text-decoration: none;
+	color:var(--base-black);
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.sans {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.logo:hover {
+	opacity: .7;
+}
+.logo:focus {
+	opacity: .4;
+}
+
+.hov-foc-opacity-text:hover {
+	opacity: .6;
+}
+.hov-foc-opacity-text:focus { /*Как ловить поведение "нажатие", для смены CSS?*/
+	opacity: .3;
+}
+.big-gilroy {
+	font-size: 47px;
+	line-height: 58px;
+}
+/*Header*/
+
+.header {
+	background-color: var(--alternate-yellow);
+}
+.search input {
+	border:none;
+	outline: none;
+	background-color: var(--alternate-yellow);
+	opacity: .3; 
+}
+.search input:hover {
+	opacity:.6;
+}
+.search input:active {
+	opacity: 1;
+}
+.menu ul {
+	list-style-type: none;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+
+/*Main*/
+
+.news {
+}
+.description {
+}
+.number {
+	min-width:1160px;
+	font-size: 179px;
+	line-height: 219px;
+	color:var(--base-white);
+	background-color: var(--alternate-yellow);
+}
+.detail {
+	display: block;
+	position: relative;
+	width:220px;
+	height:40px;
+	text-align:center;
+	vertical-align: middle;	
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+.detail:hover .bg {
+	top:-9px;
+	height:40px;
+}
+.detail:focus {
+	opacity:.3;
+}
+.detail .bg {
+	position: absolute;
+	width:100%;
+	height:8px;
+	top:7px;
+	z-index: -10;
+	background-color: var(--alternate-yellow);
+}
+.points {
+	list-style-type: none;	
+}
+.product-details {
+	font-family: "Gilroy-light", Arial, sans-serif;
+	font-size: 36px;
+	line-height: 42px;
+	letter-spacing: .1em;
+}
+.product-details .smallest {
+	font-size: 13px;
+	line-height: 15px;	
+}
+
+/*Popular products*/
+
+.product-img {
+	width:160px;
+	height:160px;
+}
+.first .product-img {
+	background:no-repeat center url("../img/index/main/popular-1.svg") var(--alternate-biege);	
+}
+.second .product-img {
+	background:no-repeat center url("../img/index/main/popular-2.svg") var(--alternate-biege);	
+}
+.third .product-img {
+	background:no-repeat center url("../img/index/main/popular-3.svg") var(--alternate-biege);	
+}
+.fourth .product-img {
+	background:no-repeat center url("../img/index/main/popular-4.svg") var(--alternate-biege);	
+}
+.fifth .product-img {
+	background:no-repeat center url("../img/index/main/popular-5.svg") var(--alternate-biege);	
+}
+.six .product-img {
+	background:no-repeat center url("../img/index/main/popular-6.svg") var(--alternate-biege);	
+}
+.products-menu {
+	letter-spacing: 0.05em;
+}
+
+/*Delivery-guarrantee-credit*/
+
+.delivery-guarrantee-credit {
+	background-color:var(--base-ligthgray);
+	z-index: -2; /*вешаю меньший z-index, дабы не перекрывал фон у текста*/
+}
+.switch-menu {
+	width:160px;
+	list-style-type: none;
+	letter-spacing: .2em;
+}
+.switch-menu li {
+	position: relative;
+	width:100%;
+	height:40px;
+	z-index:10;
+	text-align: center;
+	vertical-align: middle;
+}
+.switch-menu li:hover .bg {
+	top:-9px;
+	height:40px;
+}
+.switch-menu li:focus {
+	opacity: .3;
+}
+.switch-menu .bg {
+	position: absolute;
+	width:100%;
+	height:8px;
+	top:7px;
+	z-index: -1;
+	background-color: var(--alternate-yellow);
+}
+.switch-description .big-gilroy {
+	letter-spacing: .2em;
+}
+.switch-description .sans {
+	line-height: 30px;
+	letter-spacing: 0.1em;
+}
+.partners ul {
+	list-style-type: none;
+}
+.company-information .sans,
+.company-contacts .sans {
+	line-height: 28px;
+}
+.company-information ul {
+	list-style-type: none;
+}
+
+/*Footer*/
+
+.footer {
+	background-color: var(--base-graydarkest);
+}
+.footer .log-in-out,
+.footer .compare,
+.footer .basket {
+	opacity: .7;
+}
+.footer .sans {
+	color:var(--base-white);
+}
+.footer ul{
+	list-style-type: none;
+}
+
+
