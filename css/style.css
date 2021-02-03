@@ -47,9 +47,13 @@
 	--state-pink:#f6dada;
 }
 /*main CSS*/
-
+html {
+	height:100%;
+	padding:0;
+	margin:0;
+}
 body {
-	min-width:1160px;
+	width:1160px;
 	padding:0;
 	margin:0;
 	font-family: "Gilroy-extra-bold", Arial, sans-serif;
@@ -94,7 +98,11 @@ img {
 /*Header*/
 
 .header {
+	position:relative;
 	background-color: var(--alternate-biege);
+}
+.logo {
+
 }
 .search input {
 	border:none;
