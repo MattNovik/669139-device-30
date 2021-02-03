@@ -94,12 +94,12 @@ img {
 /*Header*/
 
 .header {
-	background-color: var(--alternate-yellow);
+	background-color: var(--alternate-biege);
 }
 .search input {
 	border:none;
 	outline: none;
-	background-color: var(--alternate-yellow);
+	background-color: var(--alternate-biege);
 	opacity: .3; 
 }
 .search input:hover {
@@ -114,18 +114,21 @@ img {
 	letter-spacing: .2em;
 }
 
-/*Main*/
+/*Main-news*/
 
 .news {
 }
 .description {
 }
-.number {
+.wrapper-number {
 	min-width:1160px;
+	text-align: right;
+	background-color: var(--alternate-biege);
+}
+.number {
 	font-size: 179px;
 	line-height: 219px;
 	color:var(--base-white);
-	background-color: var(--alternate-yellow);
 }
 .detail {
 	display: block;
@@ -154,6 +157,26 @@ img {
 }
 .points {
 	list-style-type: none;	
+}
+.points .point {
+	position: relative;
+	width:12px;
+	height:12px;
+	padding:0;
+	margin:10px 0;
+	outline: none;
+	border:solid 1px var(--base-black);
+	border-radius: 50%;
+	background: none;
+}
+.points .point:hover::after {
+	content: "";
+	display: block;
+	width:6px;
+	height:6px;
+	border:solid 1px var(--base-black);
+	border-radius: 50%;
+	margin: -3px 1px;
 }
 .product-details {
 	font-family: "Gilroy-light", Arial, sans-serif;
@@ -235,15 +258,27 @@ img {
 	line-height: 30px;
 	letter-spacing: 0.1em;
 }
+.switch-image {
+	width:136px;
+	height:164px;
+	z-index:1;
+	background:no-repeat center url("../img/index/main/delivery2.svg");
+}
+
+
+/*Partners*/
+
 .partners ul {
 	list-style-type: none;
 }
+
+/*Company-information*/
+
 .company-information .sans,
 .company-contacts .sans {
 	line-height: 28px;
 }
 .company-information ul {
-	list-style-type: none;
 }
 
 /*Footer*/
@@ -262,5 +297,25 @@ img {
 .footer ul{
 	list-style-type: none;
 }
+.footer-list a {
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color:var(--base-white);
+}
+.social-img {
+	display: block;
+	width:32px;
+	height:32px;
+}
+.fb {
+	background: no-repeat center url("../img/index/footer/simple-icons_facebook.svg");
+}
+.inst {
+	background: no-repeat center url("../img/index/footer/icon_instagram.svg");
+}
+.tw {
+	background: no-repeat url("../img/index/footer/icon_witter.svg");
+}
+
 
 
