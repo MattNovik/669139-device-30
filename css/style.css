@@ -47,13 +47,14 @@
 	--state-pink:#f6dada;
 }
 /*main CSS*/
+
 html {
 	height:100%;
 	padding:0;
 	margin:0;
 }
 body {
-	width:1160px;
+	min-width:1160px;
 	padding:0;
 	margin:0;
 	font-family: "Gilroy-extra-bold", Arial, sans-serif;
@@ -98,11 +99,20 @@ img {
 /*Header*/
 
 .header {
+	width:1040px;
 	position:relative;
+	display: grid;
+	grid-template-rows: 20px 22px;
+	grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+	grid-row-gap: 50px;
+	padding:44px 60px 35px 60px;
+	margin:40px auto 0 auto;
 	background-color: var(--alternate-biege);
 }
 .logo {
-
+	position:absolute;
+	top:-20px;
+	left:60px;
 }
 .search input {
 	border:none;
@@ -116,40 +126,117 @@ img {
 .search input:active {
 	opacity: 1;
 }
+.log-in-out {
+	grid-column:2 / 3;
+	justify-self: start;
+}
+.compare{
+	grid-column:4 / 4;	
+	justify-self: start;
+}
+.basket{
+	grid-column:5 / 5;
+	justify-self: end;
+}
+.menu {
+	width:1040px;  
+	grid-column:1 / 5;
+}
 .menu ul {
+	display: grid;
+	grid-template-columns: 50% 1fr 1fr 1fr 1fr;/*странное поведние гридов в этом моменте: берет не всю ширину, а только 910px вместо 1040;*/
+	grid-template-areas: 
+		"catalog delivery guarantee contacts contacts";
+	margin:0;
+	padding:0;
 	list-style-type: none;
 	text-transform: uppercase;
 	letter-spacing: .2em;
 }
+.menu li {
+	margin:0;
+	padding:0;
+}
+.catalog {
+	grid-area:catalog;
+}
+.delivery {
+	grid-area:delivery;
+}
+.guarantee {
+	grid-area:guarantee;
+	justify-self: end;
+}
+.contacts {
+	grid-area:contacts;
+	justify-self: end;
+}
 
 /*Main-news*/
 
+.body-main {
+	width:1160px;
+	margin:0 auto;
+}
 .news {
+	width:1040px;
+	position:relative;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	z-index: 1;
+	padding:0 60px;
+}
+.main-image {
+	width:384px;
+	height:486px;
+	justify-self:start;
+	margin:0 0 0 60px; 
+	background: none;
 }
 .description {
+	justify-self:start;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding:110px 0 0 0; 
 }
 .wrapper-number {
-	min-width:1160px;
+	position: absolute;
+	top:0;
+	left:0;
+	width:1040px;
 	text-align: right;
 	background-color: var(--alternate-biege);
+	z-index: -10;
+	margin:0;
+	padding: 0 60px;
 }
 .number {
 	font-size: 179px;
 	line-height: 219px;
 	color:var(--base-white);
+	margin-bottom: -70px;
+}
+.phrase {
+	margin: 0;
+}
+.wrapper-detail-points {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .detail {
-	display: block;
+	display: flex;
 	position: relative;
 	width:220px;
 	height:40px;
-	text-align:center;
-	vertical-align: middle;	
+	justify-content:center;
+	align-items: center;	
 	text-transform: uppercase;
 	letter-spacing: .2em;
 }
 .detail:hover .bg {
-	top:-9px;
+	top:0px;
 	height:40px;
 }
 .detail:focus {
@@ -159,11 +246,14 @@ img {
 	position: absolute;
 	width:100%;
 	height:8px;
-	top:7px;
+	top:16px;
 	z-index: -10;
 	background-color: var(--alternate-yellow);
 }
 .points {
+	display: flex;
+	align-items: center;
+	height:40px;
 	list-style-type: none;	
 }
 .points .point {
@@ -171,7 +261,7 @@ img {
 	width:12px;
 	height:12px;
 	padding:0;
-	margin:10px 0;
+	margin:10px 16px 10px 0;
 	outline: none;
 	border:solid 1px var(--base-black);
 	border-radius: 50%;
