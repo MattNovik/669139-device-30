@@ -95,6 +95,11 @@ img {
 	font-size: 47px;
 	line-height: 58px;
 }
+.button {
+	border:none;
+	outline: none;
+	background: none;
+}
 /*Header*/
 
 .header {
@@ -457,5 +462,62 @@ img {
 	background: no-repeat url("../img/index/footer/icon_witter.svg");
 }
 
-
-
+/*Catalog*/
+.wrapper-products-filter {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.product-sort-filter {
+	grid-column: 1 / 1;
+}
+.products {
+	grid-column: 2 / 3;
+}
+.criteria ul {
+	list-style-type: none;
+}
+.small-gilroy {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-size:16px;
+	line-height:20px;
+	font-weight:800;
+	text-transform: uppercase;
+}
+.price,
+.color,
+.bluetooth {
+	font-size:14px;
+	text-transform: none;
+}
+.wrapper-products {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+.product-name {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size:18px;
+	line-height: 22px;
+	letter-spacing: .05em;
+}
+.product-price {
+	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 300;
+	font-size:16px;
+	line-height: 18px;
+	letter-spacing: .05em;
+}
+.pages-control {
+	display: flex;
+	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size:16px;
+	line-height: 20px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+.pages-control ul {
+	display: flex;
+	list-style-type: none;
+}
