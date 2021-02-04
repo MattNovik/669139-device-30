@@ -1,6 +1,6 @@
 /*Fonts*/
 @font-face {
-	font-family: "Gilroy-extra-bold";
+	font-family: "Gilroy";
 	src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
 	url("../fonts/gilroyextrabold.woff") format("woff");
 	font-weight:800;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-	font-family: "Gilroy-light";
+	font-family: "Gilroy";
 	src: url("../fonts/gilroylight.woff2") format("woff2"),
 	url("../fonts/gilroylight.woff") format("woff");
 	font-weight:300;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-	font-family: "Opensans-light";
+	font-family: "Opensans";
 	src: url("../fonts/opensanslight.woff2") format("woff2"),
 	url("../fonts/opensanslight.woff") format("woff");
 	font-weight:300;
@@ -54,10 +54,9 @@ html {
 	margin:0;
 }
 body {
-	min-width:1160px;
 	padding:0;
 	margin:0;
-	font-family: "Gilroy-extra-bold", Arial, sans-serif;
+	font-family: "Gilroy", Arial, sans-serif;
 	font-size:18px;
 	line-height: 22px;
 	font-weight:800;
@@ -73,7 +72,7 @@ img {
 	height: auto;
 }
 .sans {
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Opensans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 20px;
@@ -143,10 +142,10 @@ img {
 	grid-column:1 / 5;
 }
 .menu ul {
-	display: grid;
-	grid-template-columns: 50% 1fr 1fr 1fr 1fr;/*странное поведние гридов в этом моменте: берет не всю ширину, а только 910px вместо 1040;*/
+	display: flex;
+	/*grid-template-columns: 50% 1fr 1fr 1fr 1fr;странное поведние гридов в этом моменте: берет не всю ширину, а только 910px вместо 1040;
 	grid-template-areas: 
-		"catalog delivery guarantee contacts contacts";
+		"catalog delivery guarantee contacts contacts";*/
 	margin:0;
 	padding:0;
 	list-style-type: none;
@@ -158,24 +157,33 @@ img {
 	padding:0;
 }
 .catalog {
-	grid-area:catalog;
+	min-width:50%;
+	flex-grow: 4;
+	/*grid-area:catalog;*/
 }
 .delivery {
-	grid-area:delivery;
+	flex-grow: 1;
+	text-align: left;
+	/*grid-area:delivery;*/
 }
 .guarantee {
-	grid-area:guarantee;
-	justify-self: end;
+	flex-grow: 1;
+	text-align: right;
+	/*grid-area:guarantee;
+	justify-self: end;*/
 }
 .contacts {
-	grid-area:contacts;
-	justify-self: end;
+	flex-grow: 2;
+	min-width: 25%;
+	text-align:right;
+	/*grid-area:contacts;
+	justify-self: end;*/
 }
 
 /*Main-news*/
 
 .body-main {
-	width:1160px;
+	min-width:1160px;
 	margin:0 auto;
 }
 .news {
@@ -185,6 +193,7 @@ img {
 	grid-template-columns: 50% 50%;
 	z-index: 1;
 	padding:0 60px;
+	margin:0 auto;
 }
 .main-image {
 	width:384px;
@@ -198,7 +207,8 @@ img {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding:110px 0 0 0; 
+	padding:110px 0 0 0;
+	margin:0; 
 }
 .wrapper-number {
 	position: absolute;
@@ -215,7 +225,8 @@ img {
 	font-size: 179px;
 	line-height: 219px;
 	color:var(--base-white);
-	margin-bottom: -70px;
+	margin:0 0 -70px 0;
+	padding: 0;
 }
 .phrase {
 	margin: 0;
@@ -263,7 +274,7 @@ img {
 	padding:0;
 	margin:10px 16px 10px 0;
 	outline: none;
-	border:solid 1px var(--base-black);
+	border:solid .5px var(--base-black);
 	border-radius: 50%;
 	background: none;
 }
@@ -272,12 +283,12 @@ img {
 	display: block;
 	width:6px;
 	height:6px;
-	border:solid 1px var(--base-black);
+	border:solid .5px var(--base-black);
 	border-radius: 50%;
-	margin: -3px 1px;
+	margin:0 1px;
 }
 .product-details {
-	font-family: "Gilroy-light", Arial, sans-serif;
+	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 36px;
 	line-height: 42px;
 	letter-spacing: .1em;
@@ -289,6 +300,12 @@ img {
 
 /*Popular products*/
 
+.products-menu {
+	width:1160px;
+	display: flex;
+	justify-content: space-between;
+	margin:0 auto;
+}
 .product-img {
 	width:160px;
 	height:160px;
@@ -318,6 +335,9 @@ img {
 /*Delivery-guarrantee-credit*/
 
 .delivery-guarrantee-credit {
+	display: flex;
+	width:100%;
+	justify-content: space-around;
 	background-color:var(--base-ligthgray);
 	z-index: -2; /*вешаю меньший z-index, дабы не перекрывал фон у текста*/
 }
@@ -365,13 +385,23 @@ img {
 
 
 /*Partners*/
-
+.partners {
+	width:1160px;
+	margin:0 auto;
+}
 .partners ul {
+	display: flex;
 	list-style-type: none;
 }
 
 /*Company-information*/
 
+.company-information {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width:1160px;
+	margin:0 auto;
+}
 .company-information .sans,
 .company-contacts .sans {
 	line-height: 28px;
@@ -382,12 +412,24 @@ img {
 /*Footer*/
 
 .footer {
+	display: grid;
+	grid-template-row:1fr 1fr 1fr;
 	background-color: var(--base-graydarkest);
 }
 .footer .log-in-out,
 .footer .compare,
 .footer .basket {
 	opacity: .7;
+}
+.footer .log-in-out:hover,
+.footer .compare:hover,
+.footer .basket:hover {
+	opacity: 1;
+}
+.footer .log-in-out:focus,
+.footer .compare:focus,
+.footer .basket:focus {
+	opacity: .3;
 }
 .footer .sans {
 	color:var(--base-white);
