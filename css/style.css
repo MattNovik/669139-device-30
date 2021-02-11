@@ -48,9 +48,9 @@
 
   --disabled-input: #A6A6A6;
 
-  --hover-pages-step:#D9D9D9;
+  --hover-pages-step: #D9D9D9;
 
-  --catalog-pages:#EBEBEB;
+  --catalog-pages: #EBEBEB;
 }
 
 /*main CSS*/
@@ -257,7 +257,7 @@ img {
   top: 0;
   left: 0;
   width: 1040px;
-  height:146px;
+  height: 146px;
   background-color: var(--alternate-biege);
   z-index: -10;
   margin: 0;
@@ -265,24 +265,27 @@ img {
 }
 
 .number {
-	position: relative;
-	width:50%;
-	text-align: right;
+  position: relative;
+  width: 50%;
+  text-align: right;
   font-size: 179px;
   line-height: 219px;
   color: var(--base-white);
   margin: 0 0 -70px 0;
   padding: 0;
 }
-.number::before { /*очень много вопрос как это всё таки лучше сделать*/
-	content: "";
-	position: absolute;
-	top:50px;
-	left:0;
-	width:100px;
-	height: 7px;
-	background: #fff;
+
+.number::before {
+  /*очень много вопрос как это всё таки лучше сделать*/
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100px;
+  height: 7px;
+  background: #fff;
 }
+
 .phrase {
   margin: 0;
 }
@@ -340,9 +343,11 @@ img {
   border-radius: 50%;
   background: none;
 }
+
 .points .point:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
+
 .points .point:hover::after {
   content: "";
   display: block;
@@ -373,15 +378,16 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0 auto 49px auto;
-  padding:20px 0;
+  padding: 20px 0;
 }
 
 .item {
   width: 160px;
-  margin-right:40px;
+  margin-right: 40px;
 }
+
 .item:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .product-img {
@@ -414,8 +420,8 @@ img {
 }
 
 .small-product-description {
-	margin:38px 0 20px 0;
-	letter-spacing: 0;
+  margin: 38px 0 20px 0;
+  letter-spacing: 0;
 }
 
 .products-menu {
@@ -425,40 +431,45 @@ img {
 /*Delivery-guarrantee-credit*/
 
 .delivery-guarrantee-credit {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:403px;
-  padding:15px 0 0 0;
-  margin:0 0 90px 0;
+  height: 403px;
+  padding: 15px 0 0 0;
+  margin: 0 0 90px 0;
 }
+
 .underwrapper-d-g-c {
-	width:1160px;
-	display: flex;
+  width: 1160px;
+  display: flex;
   justify-content: space-between;
-  margin:0 auto;
+  margin: 0 auto;
 }
+
 .underside {
-	position: absolute;
-	height:288px;
-	bottom:0;
-	left:0;
-	right:0;
-	z-index: -5;
-	background: var(--base-ligthgray);
+  position: absolute;
+  height: 288px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -5;
+  background: var(--base-ligthgray);
 }
+
 .wrapper-switch-menu {
-	width:277px;
-	height:320px;
-	border-right:solid 7px #000; 
+  width: 277px;
+  height: 320px;
+  border-right: solid 7px #000;
 }
+
 .switch-menu {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
-  height:188px;
-  margin:80px 0 0 0; /*есть вопросы в данном моменте: по шаблону расстояние другое, но для совпадения приходится ставить так*/
-  padding:9px 0 0 0;
+  height: 188px;
+  margin: 80px 0 0 0;
+  /*есть вопросы в данном моменте: по шаблону расстояние другое, но для совпадения приходится ставить так*/
+  padding: 9px 0 0 0;
   text-transform: uppercase;
   list-style-type: none;
   letter-spacing: .2em;
@@ -468,7 +479,7 @@ img {
   position: relative;
   width: 160px;
   height: 40px;
-  text-align:center;
+  text-align: center;
   vertical-align: middle;
   z-index: 20;
 }
@@ -476,18 +487,20 @@ img {
 /*Делаю для стилизации временно, так как пока страница не поймёт active*/
 
 .switch-menu li:first-child {
-	color:#fff;
+  color: #fff;
 }
+
 .switch-menu li:first-child .bg {
-	width:277px;
-	height:40px;
-	top: -9px;
-	background: #000;
+  width: 277px;
+  height: 40px;
+  top: -9px;
+  background: #000;
 }
+
 /*конец временной стилизации*/
 
 .switch-menu li:hover .bg {
-	cursor: pointer;
+  cursor: pointer;
   top: -9px;
   height: 40px;
 }
@@ -510,11 +523,12 @@ img {
 }
 
 .switch-description {
-	height:188px;
-	margin:86px 0 0 0;
+  height: 188px;
+  margin: 86px 0 0 0;
 }
+
 .switch-description .big-gilroy {
-	margin:0 0 40px 0;
+  margin: 0 0 40px 0;
   letter-spacing: .2em;
 }
 
@@ -526,7 +540,7 @@ img {
 .switch-image {
   width: 136px;
   height: 164px;
-  margin:86px 0 0 0;
+  margin: 86px 0 0 0;
   z-index: 1;
   background: no-repeat center url("../img/index/main/delivery2.svg");
 }
@@ -553,28 +567,31 @@ img {
   width: 1160px;
   margin: 0 auto 90px auto;
 }
+
 .company-information .big-gilroy {
-	margin:57px 0 50px 0;
-	letter-spacing: .2em;
+  margin: 57px 0 50px 0;
+  letter-spacing: .2em;
 }
+
 .about-us,
 .company-contacts {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height:580px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 580px;
 }
+
 .about-us::before,
 .company-contacts::before {
-	content: "";
-	position: absolute;
-	top:0;
-	left:0;
-	width:80px;
-	height:7px;
-	background: #000;
-} 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background: #000;
+}
 
 .about-us .sans,
 .company-contacts .sans {
@@ -583,33 +600,40 @@ img {
 
 .about-us .comp-inf-first,
 .company-contacts .comp-inf {
-  margin:0 0 40px 0;
+  margin: 0 0 40px 0;
 }
+
 .about-us .comp-inf-sec {
-	margin:0 0 60px 0;
+  margin: 0 0 60px 0;
 }
+
 .list-of-types,
 .map {
-	margin:0 0 55px 0;
+  margin: 0 0 55px 0;
 }
+
 .list-of-types {
-	list-style: circle; /*пока оставляю в таком виде, дальше будет вопрос как лучше стилизовать: через картинку или же :before;*/
-	padding:0 0 0 20px;
+  list-style: circle;
+  /*пока оставляю в таком виде, дальше будет вопрос как лучше стилизовать: через картинку или же :before;*/
+  padding: 0 0 0 20px;
 }
+
 .list-of-types li {
-	margin:0 0 21px 0;
+  margin: 0 0 21px 0;
 }
+
 .list-of-types li:last-child {
-	margin:0;
+  margin: 0;
 }
+
 .company-information .detail {
-	width:260px;
+  width: 260px;
 }
 
 /*Footer*/
 
 .footer {
-	padding: 46px 0 65px 0;
+  padding: 46px 0 65px 0;
   background-color: var(--base-graydarkest);
 }
 
@@ -644,58 +668,71 @@ img {
   letter-spacing: .2em;
   color: var(--base-white);
 }
+
 .top-footer,
 .middle-footer,
 .bottom-footer {
-	display: flex;
-	width:1160px;
-	justify-content: space-between;
-	margin:0 auto;
+  display: flex;
+  width: 1160px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
+
 .top-footer {
-	height:53px;
-	margin:0 auto 40px auto;
+  height: 53px;
+  margin: 0 auto 40px auto;
 }
+
 .logo-footer {
-	align-self: flex-end;
+  align-self: flex-end;
 }
+
 .middle-footer {
-	align-content: flex-start; /*пока проблемы с центральной и нежней частью футера (словить его ценр)*/
-	margin:0 auto 67px auto;
+  align-content: flex-start;
+  /*пока проблемы с центральной и нежней частью футера (словить его ценр)*/
+  margin: 0 auto 67px auto;
 }
+
 .adress {
-	margin:0 156px 0 0;
+  margin: 0 156px 0 0;
 }
+
 .footer-list {
-	display: flex;
-	flex-grow: 1;
-	justify-content: space-around;
-	padding:0;
-	margin:0 44px 0 0;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0 44px 0 0;
 }
+
 .wrapper-log-comp-basket {
-	display: flex;
-	justify-content: space-between;
-	width:325px;
+  display: flex;
+  justify-content: space-between;
+  width: 325px;
 }
+
 .telephone {
-	width:325px;
-	text-align: right;
-	opacity: .7;
+  width: 325px;
+  text-align: right;
+  opacity: .7;
 }
+
 .bottom-footer {
-	align-items: center;
+  align-items: center;
 }
+
 .decorate {
-	width:80px;
-	height:7px;
-	background: var(--alternate-yellow);
+  width: 80px;
+  height: 7px;
+  background: var(--alternate-yellow);
 }
+
 .social ul {
-	display: flex;
-	width:136px;
-	justify-content: space-between;
+  display: flex;
+  width: 136px;
+  justify-content: space-between;
 }
+
 .social-img {
   display: block;
   width: 32px;
@@ -733,16 +770,17 @@ img {
 }
 
 .product-sort-filter {
-/*  grid-column: 1 / 1;*/
+  /*  grid-column: 1 / 1;*/
 }
 
 .products {
-/*  grid-column: 2 / 3;*/
+  /*  grid-column: 2 / 3;*/
 }
 
 .criteria fieldset {
-	border:none;
+  border: none;
 }
+
 .criteria ul {
   list-style-type: none;
   font-size: 14px;
@@ -751,7 +789,7 @@ img {
 
 .criteria label:hover,
 .criteria input:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .criteria input:checked:hover {
@@ -777,7 +815,7 @@ img {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
-	line-height: 22px;
+  line-height: 22px;
   text-transform: uppercase;
   letter-spacing: .2em;
 }
@@ -936,10 +974,10 @@ img {
 }
 
 .pages-control {
-	display: flex;
-	height:70px;
-	justify-content: space-between;
-	background: var(--catalog-pages);
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  background: var(--catalog-pages);
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -955,37 +993,44 @@ img {
   align-items: center;
   list-style-type: none;
 }
+
 .pages-control button {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: .1em;
-  text-transform: uppercase;	
+  text-transform: uppercase;
 }
+
 .pages-control li {
-	opacity: .3;
+  opacity: .3;
 }
+
 .pages-control li:hover {
-	opacity: .6;
+  opacity: .6;
 }
+
 .paages-control li:focus {
-	opacity: 1;
+  opacity: 1;
 }
+
 .pages-control .back:hover,
 .pages-control .forward:hover {
-	cursor: pointer;
-	background: var(--hover-pages-step);
+  cursor: pointer;
+  background: var(--hover-pages-step);
 }
+
 .pages-control .back:focus,
 .pages-control .forward:focus {
-	opacity: .3;
+  opacity: .3;
 }
+
 .back,
 .forward {
-	display: flex;
-	width:120px;
-	height:100%;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  width: 120px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
