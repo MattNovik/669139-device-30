@@ -229,20 +229,20 @@ img {
   display: grid;
   grid-template-columns: 50% 50%;
   z-index: 1;
-  padding: 0 60px;
-  margin: 0 auto;
+  padding: 0 60px 20px 60px;
+  margin: 0 auto 76px auto;
 }
 
 .main-image {
   width: 384px;
   height: 486px;
-  justify-self: start;
+  justify-content: start;
   margin: 0 0 0 60px;
   background: none;
 }
 
 .description {
-  justify-self: start;
+  justify-content: start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -252,10 +252,12 @@ img {
 
 .wrapper-number {
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
   top: 0;
   left: 0;
   width: 1040px;
-  text-align: right;
+  height:146px;
   background-color: var(--alternate-biege);
   z-index: -10;
   margin: 0;
@@ -263,13 +265,24 @@ img {
 }
 
 .number {
+	position: relative;
+	width:50%;
+	text-align: right;
   font-size: 179px;
   line-height: 219px;
   color: var(--base-white);
   margin: 0 0 -70px 0;
   padding: 0;
 }
-
+.number::before { /*очень много вопрос как это всё таки лучше сделать*/
+	content: "";
+	position: absolute;
+	top:50px;
+	left:0;
+	width:100px;
+	height: 7px;
+	background: #fff;
+}
 .phrase {
   margin: 0;
 }
@@ -323,23 +336,26 @@ img {
   padding: 0;
   margin: 10px 16px 10px 0;
   outline: none;
-  border: solid .5px var(--base-black);
+  border: solid 1px var(--base-black);
   border-radius: 50%;
   background: none;
 }
-
+.points .point:hover {
+	cursor: pointer;
+}
 .points .point:hover::after {
   content: "";
   display: block;
   width: 6px;
   height: 6px;
-  border: solid .5px var(--base-black);
+  border: solid 1px var(--base-black);
   border-radius: 50%;
-  margin: 0 1px;
+  margin: 1px;
 }
 
 .product-details {
   font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
   font-size: 36px;
   line-height: 42px;
   letter-spacing: .1em;
@@ -356,11 +372,16 @@ img {
   width: 1160px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 49px auto;
+  padding:20px 0;
 }
 
 .item {
   width: 160px;
+  margin-right:40px;
+}
+.item:last-child {
+	margin-right: 0;
 }
 
 .product-img {
@@ -392,6 +413,11 @@ img {
   background: no-repeat center url("../img/index/main/popular-6.svg") var(--alternate-biege);
 }
 
+.small-product-description {
+	margin:38px 0 20px 0;
+	letter-spacing: 0;
+}
+
 .products-menu {
   letter-spacing: 0.05em;
 }
@@ -399,30 +425,69 @@ img {
 /*Delivery-guarrantee-credit*/
 
 .delivery-guarrantee-credit {
-  display: flex;
+  position:relative;
   width: 100%;
-  justify-content: space-around;
-  background-color: var(--base-ligthgray);
-  z-index: -2;
-  /*вешаю меньший z-index, дабы не перекрывал фон у текста*/
+  height:403px;
+  padding:15px 0 0 0;
+  margin:0 0 90px 0;
 }
-
+.underwrapper-d-g-c {
+	width:1160px;
+	display: flex;
+  justify-content: space-between;
+  margin:0 auto;
+}
+.underside {
+	position: absolute;
+	height:288px;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index: -5;
+	background: var(--base-ligthgray);
+}
+.wrapper-switch-menu {
+	width:277px;
+	height:320px;
+	border-right:solid 7px #000; 
+}
 .switch-menu {
-  width: 160px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+  width: 100%;
+  height:188px;
+  margin:80px 0 0 0; /*есть вопросы в данном моменте: по шаблону расстояние другое, но для совпадения приходится ставить так*/
+  padding:9px 0 0 0;
+  text-transform: uppercase;
   list-style-type: none;
   letter-spacing: .2em;
 }
 
 .switch-menu li {
   position: relative;
-  width: 100%;
+  width: 160px;
   height: 40px;
-  z-index: 10;
-  text-align: center;
+  text-align:center;
   vertical-align: middle;
+  z-index: 20;
 }
 
+/*Делаю для стилизации временно, так как пока страница не поймёт active*/
+
+.switch-menu li:first-child {
+	color:#fff;
+}
+.switch-menu li:first-child .bg {
+	width:277px;
+	height:40px;
+	top: -9px;
+	background: #000;
+}
+/*конец временной стилизации*/
+
 .switch-menu li:hover .bg {
+	cursor: pointer;
   top: -9px;
   height: 40px;
 }
@@ -444,7 +509,12 @@ img {
   cursor: pointer;
 }
 
+.switch-description {
+	height:188px;
+	margin:86px 0 0 0;
+}
 .switch-description .big-gilroy {
+	margin:0 0 40px 0;
   letter-spacing: .2em;
 }
 
@@ -456,15 +526,17 @@ img {
 .switch-image {
   width: 136px;
   height: 164px;
+  margin:86px 0 0 0;
   z-index: 1;
   background: no-repeat center url("../img/index/main/delivery2.svg");
 }
 
 
 /*Partners*/
+
 .partners {
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 90px auto;
 }
 
 .partners ul {
@@ -477,23 +549,72 @@ img {
 .company-information {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 127px;
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 90px auto;
 }
+.company-information .big-gilroy {
+	margin:57px 0 50px 0;
+	letter-spacing: .2em;
+}
+.about-us,
+.company-contacts {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height:580px;
+}
+.about-us::before,
+.company-contacts::before {
+	content: "";
+	position: absolute;
+	top:0;
+	left:0;
+	width:80px;
+	height:7px;
+	background: #000;
+} 
 
-.company-information .sans,
+.about-us .sans,
 .company-contacts .sans {
   line-height: 28px;
 }
 
-.company-information ul {}
+.about-us .comp-inf-first,
+.company-contacts .comp-inf {
+  margin:0 0 40px 0;
+}
+.about-us .comp-inf-sec {
+	margin:0 0 60px 0;
+}
+.list-of-types,
+.map {
+	margin:0 0 55px 0;
+}
+.list-of-types {
+	list-style: circle; /*пока оставляю в таком виде, дальше будет вопрос как лучше стилизовать: через картинку или же :before;*/
+	padding:0 0 0 20px;
+}
+.list-of-types li {
+	margin:0 0 21px 0;
+}
+.list-of-types li:last-child {
+	margin:0;
+}
+.company-information .detail {
+	width:260px;
+}
 
 /*Footer*/
 
 .footer {
-  display: grid;
-  grid-template-row: 1fr 1fr 1fr;
+	padding: 46px 0 65px 0;
   background-color: var(--base-graydarkest);
+}
+
+.footer .sans {
+  color: var(--base-white);
 }
 
 .footer .log-in-out,
@@ -514,10 +635,6 @@ img {
   opacity: .3;
 }
 
-.footer .sans {
-  color: var(--base-white);
-}
-
 .footer ul {
   list-style-type: none;
 }
@@ -527,7 +644,58 @@ img {
   letter-spacing: .2em;
   color: var(--base-white);
 }
-
+.top-footer,
+.middle-footer,
+.bottom-footer {
+	display: flex;
+	width:1160px;
+	justify-content: space-between;
+	margin:0 auto;
+}
+.top-footer {
+	height:53px;
+	margin:0 auto 40px auto;
+}
+.logo-footer {
+	align-self: flex-end;
+}
+.middle-footer {
+	align-content: flex-start; /*пока проблемы с центральной и нежней частью футера (словить его ценр)*/
+	margin:0 auto 67px auto;
+}
+.adress {
+	margin:0 156px 0 0;
+}
+.footer-list {
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-around;
+	padding:0;
+	margin:0 44px 0 0;
+}
+.wrapper-log-comp-basket {
+	display: flex;
+	justify-content: space-between;
+	width:325px;
+}
+.telephone {
+	width:325px;
+	text-align: right;
+	opacity: .7;
+}
+.bottom-footer {
+	align-items: center;
+}
+.decorate {
+	width:80px;
+	height:7px;
+	background: var(--alternate-yellow);
+}
+.social ul {
+	display: flex;
+	width:136px;
+	justify-content: space-between;
+}
 .social-img {
   display: block;
   width: 32px;
