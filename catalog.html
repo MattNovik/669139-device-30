@@ -88,7 +88,7 @@
   </header>
   <main>
     <section class="product">
-      <h1 class="monpods">
+      <h1 class="monopods">
         Моноподы для селфи
       </h1>
       <div class="steps">
@@ -103,148 +103,189 @@
         </a>
       </div>
       <div class="wrapper-products-filter">
-        <div class="product-sort-filter">
-          <div class="filter">
+        <div class="wrapper-filter-sort">
+          <div class="wrapper-second-filter-sort">
             <div class="wrapper-filter small-gilroy">
               фильтр:
             </div>
-            <form class="criteria">
-              <p class="price small-gilroy">Стоимость</p>
-              <div class="price-range"></div>
-              <fieldset class="by-color">
-                <legend class="color small-gilroy">Цвет</legend>
-                <ul class="sans">
-                  <li>
-                    <input type="checkbox" id="black" name="black" value="black-color" class="color-black" checked>
-                    <label for="black">Черный</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="white" name="white" value="white-color" class="color-white">
-                    <label for="white">Белый</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-blue" checked>
-                    <label for="blue">Синий</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="red" name="red" value="red-color" class="color-red" checked>
-                    <label for="red">Красный</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-pink">
-                    <label for="pink">Розовый</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="by-bluetooth">
-                <legend class="bluetooth small-gilroy">Bluetooth</legend>
-                <ul class="sans">
-                  <li>
-                    <input type="radio" class="bluetooth-yes" name="yes-no" value="yes" id="yes" checked>
-                    <label for="yes sans">Есть</label>
-                  </li>
-                  <li>
-                    <input type="radio" class="bluetooth-no" name="yes-no" value="no" id="no">
-                    <label for="no sans">Нет</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <div class="wrapper-input-send">
-                <div class="bg"></div>
-                <input type="submit" class="send-form button" value="Показать">
+            <div class="products-head">
+              <span class="sort small-gilroy">Сортировка:</span>
+              <div class="wrapper-sort">
+                <div class="wrapper-types-sort">
+                  <a href="#" class="by-price sans">
+                    По цене
+                  </a>
+                  <a href="#" class="by-type sans">
+                    По типу
+                  </a>
+                  <a href="#" class="by-prefer sans">
+                    По популярности
+                  </a>
+                </div>
+                <div class="decorate-arrow">
+                  <svg class="up-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 4L3 4L8.5 14L14 4Z" fill="black" />
+                  </svg>
+                  <svg class="down-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 4L3 4L8.5 14L14 4Z" fill="black" />
+                  </svg>
+                </div>
               </div>
-            </form>
-          </div>
-          <div class="sort-products">
+            </div>
           </div>
         </div>
-        <div class="products">
-          <div class="products-head">
-            <span class="small-gilroy">Сортировка:</span>
-            <a href="#" class="by-price sans">
-              По цене
-            </a>
-            <a href="#" class="by-type sans">
-              По типу
-            </a>
-            <a href="#" class="by-prefer sans">
-              По популярности
-            </a>
-          </div>
-          <div class="wrapper-products">
-            <div class="first-product">
-              <a href="blank.html">
-                <div class="wrapper-item">
-                  <img src="img/catalog/main/item-11res.png" alt="" width="360" height="380" class="item-img">
-                  <div class="to-busket">
-                    <a href="#" class="to-busket-link">
-                      <div class="bg"></div>
-                      В корзину
-                    </a>
-                    <button>Добавить к сравнению</button>
+        <div class="products-filter">
+          <div class="wrapper-product-sort-filter product-sort-filter">
+            <div class="filter">
+
+              <form class="criteria">
+                <legend class="price small-gilroy">Стоимость</legend>
+                <div class="price-range">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
                 </div>
-                <h2 class="product-name">Любительская селфи-палка</h2>
-                <span class="product-price">1 100 руб.</span>
-              </a>
+                <div class="price-min-max small-gilroy">
+                  <label for="pirce-min">от</label>
+                  <input type="number" class="price-min" id="price-min" value="0">
+                  <label for="pirce-max">до</label>
+                  <input type="number" class="price-max" id="price-max" value="5000">
+                </div>
+                <fieldset class="by-color">
+                  <legend class="color small-gilroy">Цвет</legend>
+                  <ul class="color-choice sans">
+                    <li>
+                      <input type="checkbox" id="black" name="black" value="black-color" class="color-check color-black" checked>
+                      <label for="black">Черный</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="white" name="white" value="white-color" class="color-check color-white">
+                      <label for="white">Белый</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-check color-blue" checked>
+                      <label for="blue">Синий</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="red" name="red" value="red-color" class="color-check color-red" checked>
+                      <label for="red">Красный</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-check color-pink">
+                      <label for="pink">Розовый</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="by-bluetooth">
+                  <legend class="bluetooth small-gilroy">Bluetooth</legend>
+                  <ul class="bluetooth-choice sans">
+                    <li>
+                      <input type="radio" class="bluetooth-check bluetooth-yes" name="yes-no" value="yes" id="yes" checked>
+                      <label for="yes" class="sans">Есть</label>
+                    </li>
+                    <li>
+                      <input type="radio" class="bluetooth-check bluetooth-no" name="yes-no" value="no" id="no">
+                      <label for="no" class="sans">Нет</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <div class="wrapper-input-send">
+                  <div class="bg"></div>
+                  <input type="submit" class="send-form button" value="Показать">
+                </div>
+              </form>
             </div>
-            <div class="second-product">
-              <a href="blank.html">
-                <div class="wrapper-item">
-                  <img src="img/catalog/main/item-21(res).png" alt="" width="360" height="380" class="item-img">
-                  <div class="to-busket">
-                    <a href="#" class="to-busket-link">
-                      <div class="bg"></div>
-                      В корзину
-                    </a>
-                    <button>Добавить к сравнению</button>
-                  </div>
-                </div>
-                <h2 class="product-name">Профессиональная селфи-палка </h2>
-                <span class="product-price">1 500 руб.</span>
-              </a>
-            </div>
-            <div class="third-product">
-              <a href="blank.html">
-                <div class="wrapper-item">
-                  <img src="img/catalog/main/item-31(1es).png" alt="" width="360" height="380" class="item-img">
-                  <div class="to-busket">
-                    <a href="#" class="to-busket-link">
-                      <div class="bg"></div>
-                      В корзину
-                    </a>
-                    <button>Добавить к сравнению</button>
-                  </div>
-                </div>
-                <h2 class="product-name">Непотопляемая селфи-палка</h2>
-                <span class="product-price">1 500 руб.</span>
-              </a>
-            </div>
-            <div class="fourth-product">
-              <a href="blank.html">
-                <div class="wrapper-item">
-                  <img src="img/catalog/main/item-41(res).png" alt="" width="360" height="380" class="item-img">
-                  <div class="to-busket">
-                    <a href="#" class="to-busket-link">
-                      <div class="bg"></div>
-                      В корзину
-                    </a>
-                    <button>Добавить к сравнению</button>
-                  </div>
-                </div>
-                <h2 class="product-name">Селфи-палка «Следуй за мной»</h2>
-                <span class="product-price">1 900 руб.</span>
-              </a>
+            <div class="sort-products">
             </div>
           </div>
-          <div class="pages-control">
-            <span class="back">Назад</span>
-            <ul>
-              <li><button class="button">1</button></li>
-              <li><button class="button">2</button></li>
-              <li><button class="button">3</button></li>
-            </ul>
-            <span class="forward">вперед</span>
+          <div class="products">
+            <div class="wrapper-products">
+              <div class="first-product">
+                <a href="blank.html">
+                  <div class="wrapper-item">
+                    <img src="img/catalog/main/item-11res.png" alt="" width="360" height="380" class="item-img">
+                    <div class="to-busket">
+                      <a href="#" class="to-busket-link">
+                        <div class="bg"></div>
+                        В корзину
+                      </a>
+                      <button>Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="wrapper-name-price">
+                    <h2 class="product-name">Любительская селфи-палка</h2>
+                    <span class="product-price">1 100 руб.</span>
+                  </div>
+                </a>
+              </div>
+              <div class="second-product">
+                <a href="blank.html">
+                  <div class="wrapper-item">
+                    <img src="img/catalog/main/item-21(res).png" alt="" width="360" height="380" class="item-img">
+                    <div class="to-busket">
+                      <a href="#" class="to-busket-link">
+                        <div class="bg"></div>
+                        В корзину
+                      </a>
+                      <button>Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="wrapper-name-price">
+                    <h2 class="product-name">Профессиональная</br> селфи-палка </h2>
+                    <span class="product-price">1 500 руб.</span>
+                  </div>
+                </a>
+              </div>
+              <div class="third-product">
+                <a href="blank.html">
+                  <div class="wrapper-item">
+                    <img src="img/catalog/main/item-31(1es).png" alt="" width="360" height="380" class="item-img">
+                    <div class="to-busket">
+                      <a href="#" class="to-busket-link">
+                        <div class="bg"></div>
+                        В корзину
+                      </a>
+                      <button>Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="wrapper-name-price">
+                    <h2 class="product-name">Непотопляемая</br> селфи-палка</h2>
+                    <span class="product-price">1 500 руб.</span>
+                  </div>
+                </a>
+              </div>
+              <div class="fourth-product">
+                <a href="blank.html">
+                  <div class="wrapper-item">
+                    <img src="img/catalog/main/item-41(res).png" alt="" width="360" height="380" class="item-img">
+                    <div class="to-busket">
+                      <a href="#" class="to-busket-link">
+                        <div class="bg"></div>
+                        В корзину
+                      </a>
+                      <button>Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="wrapper-name-price">
+                    <h2 class="product-name">Селфи-палка «Следуй за мной»</h2>
+                    <span class="product-price">1 900 руб.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="pages-control">
+              <span class="back">Назад</span>
+              <ul>
+                <li><a href="#" class="pages page-first">1</a></li>
+                <li><a href="#" class="pages page-second">2</a></li>
+                <li><a href="#" class="pages page-third">3</a></li>
+              </ul>
+              <span class="forward">вперед</span>
+            </div>
           </div>
         </div>
       </div>
@@ -352,6 +393,16 @@
         </ul>
       </div>
       <a href="https://htmlacademy.ru/study" class="academy-logo hov-foc-opacity-text">
+        <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+          <path d="M13.62 0.0169551L13.472 0L0 1.40827V26.0042L13.473 34L26.903 26.0311L26.945 26.0062V1.40827L13.62 0.0169551ZM25.019 12.095L13.495 5.31992L13.494 5.21619L13.407 5.26606L13.319 5.21021V5.31892L1.925 12.086V3.13869L13.473 1.92989L25.02 3.13869V12.095H25.019ZM13.405 6.76908L24.923 13.4644L20.444 16.0974L13.351 11.8875L13.337 13.2988L19.241 16.8025L18.381 17.3082L13.351 14.3241L13.337 15.7353L17.164 18.0043L16.382 18.526L13.351 16.7437L13.337 18.1529L15.19 19.2411L13.39 20.3192L2.034 13.586L13.405 6.76908ZM1.925 15.0871L13.336 21.8601L13.352 22.9014L5.41 18.1859L5.395 19.5981L13.374 24.3805L13.392 25.4536L5.419 20.7261L5.406 22.1364L13.427 26.9457L13.473 26.9706L21.616 22.1115L21.605 16.9481L25.02 14.9175V24.9121L13.472 31.7659L1.925 24.9131V15.0871Z" fill="#F0C52E"/>
+          </g>
+          <defs>
+          <clipPath id="clip0">
+          <rect width="26.943" height="34" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
       </a>
     </div>
   </footer>
