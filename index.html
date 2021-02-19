@@ -20,7 +20,11 @@
     <!-- <h1>Пустой заголовок</h1> -->
     <!-- h1 создан просто для наличия, так как есть h2 дальше. А под h1 ничего не подходит по смыслу пока -->
     <form action="url" class="search">
-      <input type="search" placeholder="Поиск по сайту" class="sans">
+      <label>
+        <input type="search" placeholder="Поиск по сайту" class="sans">
+        <span class="decorate-icon"></span>
+        <button class="search-btn">Найти</button>
+      </label>
     </form>
     <a href="blank.html" class="log-in-out sans hov-foc-opacity-text">Войти</a>
     <a href="blank.html" class="compare sans hov-foc-opacity-text">Сравнить</a>
@@ -233,7 +237,9 @@
       <a href="+74954959595" class="telephone sans">Тел.: +7 (495) 495-95-95</a>
     </div>
     <div class="bottom-footer">
-      <div class="decorate"></div>
+      <div class="wrapper-decorate">
+        <div class="decorate"></div>
+      </div>
       <div class="social">
         <ul>
           <li>
