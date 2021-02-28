@@ -19,16 +19,22 @@
     </a>
     <!-- <h1>Пустой заголовок</h1> -->
     <!-- h1 создан просто для наличия, так как есть h2 дальше. А под h1 ничего не подходит по смыслу пока -->
-    <form action="url" class="search">
-      <label>
-        <input type="search" placeholder="Поиск по сайту" class="sans">
-        <span class="decorate-icon"></span>
-        <button class="search-btn">Найти</button>
-      </label>
-    </form>
-    <a href="blank.html" class="log-in-out sans hov-foc-opacity-text">Войти</a>
-    <a href="blank.html" class="compare sans hov-foc-opacity-text">Сравнить</a>
-    <a href="blank.html" class="basket sans hov-foc-opacity-text">Корзина</a>
+    <div class="wrapper-top-header">
+      <form action="url" class="search">
+        <label>
+          <input type="search" placeholder="Поиск по сайту" class="sans">
+          <span class="decorate-icon"></span>
+          <button class="search-btn">Найти</button>
+        </label>
+      </form>
+      <div class="wrapper-header-log-comp-basket">
+        <a href="blank.html" class="log-in-out sans hov-foc-opacity-text">Войти</a>
+        <div class="wrapper-comp-basket">
+          <a href="blank.html" class="compare sans hov-foc-opacity-text">Сравнить</a>
+          <a href="blank.html" class="basket sans hov-foc-opacity-text">Корзина</a>
+        </div>
+      </div>
+    </div>
     <nav class="menu">
       <ul>
         <li class="catalog">
