@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="utf-8">
@@ -80,6 +80,32 @@
     </nav>
   </header>
   <main class="body-main">
+    <section class="modal visible">  <!-- убрать класс visible для модального окна -->
+      <form action="" class="modal-form">
+        <fieldset class="modal-name-email">
+          <div class="wrapper-name">
+            <label for="modale-name">Ваше имя:</label>
+            <input type="text" class="modal-form-name" id="modale-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="wrapper-email">
+            <label for="modale-email" >Ваш e-mail:</label>
+            <input type="email" class="modal-form-email" id="modale-email" placeholder="email@example.com">
+          </div>
+        </fieldset>
+        <div class="wrapper-textmail">
+          <label for="modale-textemail">Текст письма:</label>
+          <textarea name="textmail" class="modal-form-textmail" id="modale-textmail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="wrapper-input-send">
+          <div class="bg modal-input"></div>
+          <input type="submit" class="send-form button" value="Отправить">
+        </div>
+        <div class="wrapper-close">
+          <span class="close-first"></span>
+          <span class="close-second"></span>
+        </div>        
+      </form>
+    </section>
     <section class="news">
       <img src="img/index/main/slider-11.png" class="main-image" alt="" width="384" height="486">
       <div class="description">
@@ -226,6 +252,12 @@
           напишите нам
         </a>
       </div>
+    </section>
+    <section class="modal-map visible"> <!-- убрать класс visible для модального окна -->
+      <div class="wrapper-close">
+        <span class="close-first"></span>
+        <span class="close-second"></span>
+      </div>        
     </section>
   </main>
   <footer class="footer">

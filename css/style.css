@@ -55,13 +55,18 @@
 
 /*main CSS*/
 
-html {
+.page {
   height: 100%;
   padding: 0;
   margin: 0;
 }
 
-body {
+.body {
+  position: relative;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   padding: 0;
   margin: 0;
   font-family: "Gilroy", Arial, sans-serif;
@@ -343,12 +348,193 @@ img {
   text-align: right;
 }
 
-/*Main-news*/
-
 .body-main {
   min-width: 1160px;
   margin: 0 auto;
 }
+
+/*Modal*/
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 550px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  padding: 92px 100px 69px 100px;
+  z-index: 100;
+}
+
+.modal.visible {
+  visibility: hidden;
+}
+
+.modal .bg.modal-input {
+  background: var(--alternate-biege);
+}
+
+.modal-name-email {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 32px 0;
+  padding: 0;
+  border: none;
+}
+
+.wrapper-name,
+.wrapper-email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 82px;
+}
+
+.wrapper-name {
+  margin: 0 40px 0 0;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+  background: #EAEAEA;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  background: transparent;
+  border: 2px solid var(--alternate-biege);
+}
+
+.modal-form-name,
+.modal-form-email {
+  width: 360px;
+  height: 50px;
+  padding: 16px 0 15px 20px;
+  border: solid 2px transparent;
+  outline: none;
+  background: #F2F2F2;
+  box-sizing: border-box;
+  font-family: "Opensans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper-textmail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 0 44px 0;
+}
+
+.wrapper-textmail label {
+  margin: 0 0 10px 0;
+}
+
+.modal-form-textmail {
+  display: flex;
+  height: 167px;
+  width: 100%;
+  background: #F2F2F2;
+  border: solid 2px transparent;
+  outline: none;
+  box-sizing: border-box;
+  padding: 16px 0 0 20px;
+  font-family: "Opensans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.4);
+  resize: none;
+}
+
+.wrapper-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--alternate-biege);
+  opacity: .5;
+  z-index: 110;
+  cursor: pointer;
+}
+
+.wrapper-close:hover {
+  opacity: 1;
+}
+
+.wrapper-close:active {
+  opacity: .3;
+}
+
+.wrapper-close .close-first {
+  position: absolute;
+  top: 27px;
+  left: 14px;
+  width: 28px;
+  height: 2px;
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+.wrapper-close .close-second {
+  position: absolute;
+  top: 27px;
+  left: 14px;
+  width: 28px;
+  height: 2px;
+  transform: rotate(-45deg);
+  background: #fff;
+}
+
+/*Modal Map*/
+
+.modal-map {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 994px;
+  height: 593px;
+  background: url("../img/index/main/map-big.png") center no-repeat;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.modal-map.visible {
+  visibility: hidden;
+}
+
+.modal-map .wrapper-close {
+  position: absolute;
+  top: 20px;
+  right: 37px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--alternate-biege);
+  opacity: .5;
+  z-index: 120;
+  cursor: pointer;
+}
+.modal-map .wrapper-close:hover {
+  opacity: 1;
+}
+
+.modal-map .wrapper-close:active {
+  opacity: .3;
+}
+
+/*Main-news*/
 
 .news {
   width: 1040px;
@@ -694,11 +880,13 @@ img {
 .switch-menu li:focus {
   opacity: .3;
 }
+
 .switch-menu li:active {
   color: #fff;
 }
+
 .switch-menu li:active .bg {
-	width:277px;
+  width: 277px;
   width: 277px;
   height: 40px;
   top: -9px;
@@ -1032,13 +1220,15 @@ img {
 .fb:hover,
 .inst:hover,
 .tw:hover {
-	opacity: 1;
+  opacity: 1;
 }
+
 .fb:active,
 .inst:active,
 .tw:active {
-	opacity: .1;
+  opacity: .1;
 }
+
 .academy-logo {
   width: 164px;
   text-align: right;
@@ -1612,20 +1802,22 @@ img {
   z-index: -10;
   background-color: var(--alternate-yellow);
 }
+
 .new-item {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width:62px;
-	height:62px;
-	top:29px;
-	right:27px;
-	color:rgba(0,0,0,0.3);
-	border:solid 2px rgba(0,0,0,0.3);
-	border-radius: 50%;
-	text-transform: uppercase;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  top: 29px;
+  right: 27px;
+  color: rgba(0, 0, 0, 0.3);
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  text-transform: uppercase;
 }
+
 .wrapper-name-price {
   display: flex;
   justify-content: space-between;
