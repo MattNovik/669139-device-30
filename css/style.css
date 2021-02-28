@@ -225,7 +225,29 @@ img {
   width: 50%;
   justify-content: space-between;
 }
-
+.wrapper-log-in-out {
+	display: flex;
+	align-items: center;
+}
+.out-btn {
+	visibility: hidden;
+  width: 84px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  opacity: .3;
+  font-family: "Opensans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  cursor: pointer;	
+}
+.out-btn.visible {
+	visibility: visible;
+}
 .log-in-out {
   display: flex;
   margin: 0 0 0 28px;
@@ -235,6 +257,7 @@ img {
   display: flex;
   width: 222px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .compare {}
@@ -247,7 +270,7 @@ img {
   position: relative;
 }
 
-.log-in-out::before,
+/*.log-in-out::before,
 .compare::before,
 .basket::before {
   content: "";
@@ -268,7 +291,7 @@ img {
 
 .basket::before {
   background: url("../img/index/header/busket.svg") no-repeat center;
-}
+}*/
 
 .menu {
   width: 1040px;
@@ -448,6 +471,15 @@ img {
   border-radius: 50%;
   background: none;
 }
+.point.first:after {
+	content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: solid 1px var(--base-black);
+  border-radius: 50%;
+  margin: 1px;
+}
 
 .points .point:hover {
   cursor: pointer;
@@ -469,6 +501,7 @@ img {
   font-size: 36px;
   line-height: 42px;
   letter-spacing: .1em;
+  border-spacing: 15px;
 }
 
 .product-details .smallest {
@@ -718,13 +751,17 @@ img {
 }
 
 .list-of-types {
-  list-style: circle;
-  /*пока оставляю в таком виде, дальше будет вопрос как лучше стилизовать: через картинку или же :before;*/
-  padding: 0 0 0 20px;
+  list-style-type: none;
+  padding: 0;
 }
 
 .list-of-types li {
   margin: 0 0 21px 0;
+  padding-left:32px;
+  background-image: url("../img/index/main/round.png");
+  background-position: 0 center;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
 }
 
 .list-of-types li:last-child {
@@ -751,6 +788,11 @@ img {
 .footer .basket {
   opacity: .7;
 }
+.log-in-out,
+.compare,
+.basket {
+	position: relative;
+}
 
 .footer .log-in-out:hover,
 .footer .compare:hover,
@@ -764,6 +806,20 @@ img {
   opacity: .3;
 }
 
+.log-in-out svg,
+.compare svg,
+.basket svg{
+	position: absolute;
+	top:4px;
+	left:-24px;
+	width:13px;
+	height:14px;
+}
+.footer .log-in-out svg path,
+.footer .compare svg path,
+.footer .basket svg path {
+	fill:var(--alternate-yellow);
+}
 .footer ul {
   list-style-type: none;
 }
@@ -800,7 +856,6 @@ img {
 
 .middle-footer {
   align-content: flex-start;
-  /*пока проблемы с центральной и нежней частью футера (словить его ценр)*/
   margin: 0 auto 67px auto;
 }
 
@@ -904,10 +959,12 @@ img {
 }
 
 .steps a {
-  margin: 0 40px 0 0;
+  margin: 0 14px 0 0;
   opacity: .3;
 }
-
+.arrow-nav {
+	margin: 0 14px 0 0;
+}
 .steps a:hover {
   opacity: .6;
 }
