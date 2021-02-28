@@ -356,6 +356,7 @@ img {
 /*Modal*/
 
 .modal {
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -370,7 +371,7 @@ img {
 }
 
 .modal.visible {
-  visibility: hidden;
+  display: flex;
 }
 
 .modal .bg.modal-input {
@@ -399,13 +400,14 @@ img {
   margin: 0 40px 0 0;
 }
 
-.modal input:hover,
+.modal input[type="text"]:hover,
+.modal input[type="email"]:hover,
 .modal textarea:hover {
   background: #EAEAEA;
 }
 
-.modal input:focus,
-.modal textarea:focus {
+.modal input[type="text"]:hover,
+.modal input[type="email"]:hover, {
   background: transparent;
   border: 2px solid var(--alternate-biege);
 }
@@ -425,7 +427,12 @@ img {
   line-height: 19px;
   color: rgba(0, 0, 0, 0.4);
 }
-
+.modal.modal-error .modal-form-name,
+.modal.modal-error .modal-form-email,
+.modal.modal-error .modal-form-textmail{
+  background: #F6DADA;
+  border:none;
+}
 .wrapper-textmail {
   display: flex;
   flex-direction: column;
@@ -499,6 +506,7 @@ img {
 /*Modal Map*/
 
 .modal-map {
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -511,7 +519,7 @@ img {
 }
 
 .modal-map.visible {
-  visibility: hidden;
+  display: flex;
 }
 
 .modal-map .wrapper-close {
@@ -1657,8 +1665,13 @@ img {
   line-height: 22px;
   text-transform: uppercase;
   letter-spacing: .2em;
+  border:none;
 }
-
+.send-form:hover {
+  background:none;
+  border:none;
+  outline: none;
+}
 .wrapper-input-send:hover .bg {
   top: 0px;
   height: 40px;
