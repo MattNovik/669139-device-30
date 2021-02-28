@@ -1589,7 +1589,20 @@ img {
   z-index: -10;
   background-color: var(--alternate-yellow);
 }
-
+.new-item {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:62px;
+	height:62px;
+	top:29px;
+	right:27px;
+	color:rgba(0,0,0,0.3);
+	border:solid 2px rgba(0,0,0,0.3);
+	border-radius: 50%;
+	text-transform: uppercase;
+}
 .wrapper-name-price {
   display: flex;
   justify-content: space-between;
