@@ -694,6 +694,16 @@ img {
 .switch-menu li:focus {
   opacity: .3;
 }
+.switch-menu li:active {
+  color: #fff;
+}
+.switch-menu li:active .bg {
+	width:277px;
+  width: 277px;
+  height: 40px;
+  top: -9px;
+  background: #000;
+}
 
 .switch-menu .bg {
   position: absolute;
@@ -1006,16 +1016,29 @@ img {
 
 .fb {
   background: no-repeat center url("../img/index/footer/simple-icons_facebook.svg");
+  opacity: .3;
 }
 
 .inst {
   background: no-repeat center url("../img/index/footer/icon_instagram.svg");
+  opacity: .3;
 }
 
 .tw {
   background: no-repeat url("../img/index/footer/icon_witter.svg");
+  opacity: .3;
 }
 
+.fb:hover,
+.inst:hover,
+.tw:hover {
+	opacity: 1;
+}
+.fb:active,
+.inst:active,
+.tw:active {
+	opacity: .1;
+}
 .academy-logo {
   width: 164px;
   text-align: right;
