@@ -1,3 +1,4 @@
+/*JS for modalWindow*/
 const modalLink = document.querySelector(".open-modal");
 const modalPopup = document.querySelector(".modal");
 const modalClose = modalPopup.querySelector(".wrapper-close");
@@ -53,4 +54,20 @@ window.addEventListener("keydown", function (evt) {
       modalPopup.classList.remove("modal-error");
     }
   }
+});
+
+/*JS for modalMap*/
+
+const modalMapOpen = document.querySelector(".map");
+const modalMap = document.querySelector(".modal-map")
+const modalMapClose = modalMap.querySelector(".wrapper-close");
+
+modalMapOpen.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.add("visible");
+});
+
+modalMapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.remove("visible");
 });

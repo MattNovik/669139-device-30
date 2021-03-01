@@ -427,9 +427,9 @@ img {
   line-height: 19px;
   color: rgba(0, 0, 0, 0.4);
 }
-.modal.modal-error .modal-form-name,
-.modal.modal-error .modal-form-email,
-.modal.modal-error .modal-form-textmail{
+.modal.modal-error .modal-form-name:invalid,
+.modal.modal-error .modal-form-email:invalid,
+.modal.modal-error .modal-form-textmail:invalid{
   background: #F6DADA;
   border:none;
 }
