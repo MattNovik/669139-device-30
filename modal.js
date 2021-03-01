@@ -5,12 +5,14 @@ const modalClose = modalPopup.querySelector(".wrapper-close");
 const modalForm = modalPopup.querySelector(".modal-form");
 const modalName = modalPopup.querySelector(".modal-form-name");
 const modalEmail = modalPopup.querySelector(".modal-form-email");
+const modalTextmail = modalPopup.querySelector(".modal-form-textmail");
 
 let isStorageSupport = true;
-let storage = "";
+let storageName = "";
+let storageEmail = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storageName = localStorage.getItem("login");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -19,8 +21,11 @@ modalLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalPopup.classList.add("visible");
   
-  if (storage) {
-    modalName.value = storage;
+  if (storageName & storageEmail) {
+    modalName.value = storageName;
+    modalEmail.value = storageEmail;
+    modalTextmail.focus();
+  } else if (storageName){
     modalEmail.focus();
   } else {
     modalName.focus();
@@ -42,6 +47,7 @@ modalForm.addEventListener("submit", function (evt) {
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", modalName.value);
+      localStorage.setItem("email", modalEmail.value);
     }
   }
 });
