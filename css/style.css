@@ -126,6 +126,18 @@ img {
   outline: none;
   background: none;
 }
+.non-visible-element {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /*Header*/
 
@@ -310,47 +322,58 @@ img {
   text-transform: uppercase;
   letter-spacing: .2em;
 }
-.menu-catalog:hover .wrapper-drop-down-menu {
+
+.menu-item-catalog:hover .wrapper-drop-down-menu {
   display: flex;
 }
+
 .wrapper-drop-down-menu {
   position: absolute;
-  display:  none;
+  display: none;
   justify-content: flex-start;
-  width:1160px;
-  height:166px;
-  top:22px;
-  left:-60px;
+  width: 1160px;
+  height: 166px;
+  top: 22px;
+  left: -60px;
   background: var(--alternate-biege);
-  z-index:20;
+  z-index: 20;
 }
+
 .drop-down-menu {
   display: flex;
   justify-content: flex-start;
-  width:1040px;
-  height:176px;
+  width: 1040px;
+  height: 168px;
   box-sizing: border-box;
   text-transform: none;
   list-style-type: none;
-  margin:0 auto 0 auto;
-  padding:30px 0 26px 0;
+  margin: 0 auto 0 auto;
+  padding: 30px 0 26px 0;
+}
+.drop-down-menu ul {
+  margin:0 61px 0 0;
+  padding:0;
 }
 .drop-down-menu li {
-  width:179px;
-  height:20px;
-  margin:0 61px 20px 0;
+  height: 20px;
+  margin: 0 0 20px 0;
   letter-spacing: 0;
+  list-style-type: none;
 }
+
 .menu-catalog .menu-item-catalog {
   margin: 0;
   padding: 0;
 }
+
 .drop-down-item a:hover {
   opacity: .6;
 }
+
 .drop-down-item a:focus {
   opacity: .3;
 }
+
 .catalog {
   position: relative;
   min-width: 50%;
@@ -884,9 +907,10 @@ img {
 
 /*Делаю для стилизации временно, так как пока страница не поймёт active*/
 
-.switch-menu li.slider-open  {
-  color:#fff;
+.switch-menu li.slider-open {
+  color: #fff;
 }
+
 .switch-menu li.slider-open .bg {
   width: 278px;
   height: 40px;
@@ -931,15 +955,17 @@ img {
 }
 
 .slider {
-  width:100%;
+  width: 100%;
   list-style-type: none;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
+
 .slider li {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
+
 .slider-first.hide,
 .slider-second.hide,
 .slider-third.hide {
@@ -948,7 +974,7 @@ img {
 
 .switch-description {
   position: relative;
-  width:100%;
+  width: 100%;
   height: 188px;
   box-sizing: border-box;
   padding: 0 0 0 116px;
@@ -1255,15 +1281,17 @@ img {
   align-items: center;
   margin: 0 auto;
 }
+
 .bottom-footer::before {
   content: "";
   position: absolute;
-  top:13px;
-  left:0;
-  width:80px;
-  height:7px;
+  top: 13px;
+  left: 0;
+  width: 80px;
+  height: 7px;
   background: var(--alternate-yellow);
 }
+
 /*.wrapper-decorate {
   width: 212px;
   text-align: left;
