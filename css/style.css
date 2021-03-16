@@ -503,7 +503,7 @@ img {
   display: flex;
 }
 
-.modal .bg.modal-input {
+.wrapper-input-send.modal-input.bg::before {
   background: var(--alternate-biege);
 }
 
@@ -742,7 +742,7 @@ img {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: start;
-  margin: 0 0 0 60px;
+  margin: 15px 0 0 29px;
   background: none;
 }
 .wrapper-main-page-product-second .main-image {
@@ -838,6 +838,7 @@ img {
 }
 
 .detail {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,7 +855,7 @@ img {
   letter-spacing: .2em;
 }
 
-.detail:hover .bg {
+.detail:hover.bg::before {
   top: 0px;
   height: 40px;
 }
@@ -863,7 +864,8 @@ img {
   opacity: .3;
 }
 
-.detail .bg {
+.detail.bg::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 8px;
@@ -1127,7 +1129,9 @@ img {
   color: #fff;
 }
 
-.switch-menu li.slider-open .bg {
+.switch-menu li.slider-open.bg::before {
+  content: "";
+  position: absolute;
   width: 278px;
   height: 40px;
   top: -9px;
@@ -1136,7 +1140,7 @@ img {
 
 /*конец временной стилизации*/
 
-.switch-menu li:hover .bg {
+.switch-menu li:hover.bg::before {
   cursor: pointer;
   top: -9px;
   height: 40px;
@@ -1150,18 +1154,20 @@ img {
   color: #fff;
 }
 
-.switch-menu li:active .bg {
+.switch-menu li:active.bg::before {
   width: 278px;
   height: 40px;
   top: -9px;
   background: #000;
 }
 
-.switch-menu .bg {
+.switch-menu li.bg::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 8px;
   top: 7px;
+  left:0;
   z-index: -1;
   background-color: var(--alternate-yellow);
 }
@@ -2063,6 +2069,7 @@ img {
 }
 
 .wrapper-input-send {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2089,12 +2096,13 @@ img {
 }
 
 .send-form:hover {
+  cursor: pointer;
   background: none;
   border: none;
   outline: none;
 }
 
-.wrapper-input-send:hover .bg {
+.wrapper-input-send:hover.bg::before {
   top: 0px;
   height: 40px;
 }
@@ -2103,7 +2111,8 @@ img {
   opacity: .3;
 }
 
-.wrapper-input-send .bg {
+.wrapper-input-send.bg::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 8px;
@@ -2243,6 +2252,7 @@ img {
 }
 
 .to-busket-link {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2261,7 +2271,7 @@ img {
   z-index: 1;
 }
 
-.to-busket-link:hover .bg {
+.to-busket-link:hover.bg::before {
   top: 0px;
   height: 40px;
 }
@@ -2270,7 +2280,8 @@ img {
   opacity: .3;
 }
 
-.to-busket-link .bg {
+.to-busket-link.bg::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 8px;
