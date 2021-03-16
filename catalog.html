@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicon/180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="body">
@@ -20,11 +20,9 @@
     <h1 class="non-visible-element">Техника для съёмки</h1>
     <div class="wrapper-top-header">
       <form action="get" class="search">
-        <label for="search">
           <input type="search" id="search" placeholder="Поиск по сайту" class="sans">
           <span class="decorate-icon"></span>
           <button class="search-btn">Найти</button>
-        </label>
       </form>
       <div class="wrapper-header-log-comp-basket">
         <div class="wrapper-log-in-out">
@@ -32,9 +30,9 @@
             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.49996 0.333328C5.69704 0.333328 6.66663 1.3775 6.66663 2.66666C6.66663 3.95583 5.69704 5 4.49996 5C3.30288 5 2.33329 3.95583 2.33329 2.66666C2.33329 1.3775 3.30288 0.333328 4.49996 0.333328ZM4.49996 9.66666C4.49996 9.66666 8.83329 9.66666 8.83329 8.5C8.83329 7.1 6.72079 5.58333 4.49996 5.58333C2.27913 5.58333 0.166626 7.1 0.166626 8.5C0.166626 9.66666 4.49996 9.66666 4.49996 9.66666Z" fill="black" />
             </svg>
-            Войти
+            Валентин Петухов
           </a>
-          <button class="out-btn">Выйти</button>
+          <button class="out-btn visible">Выйти</button>
         </div>
         <div class="wrapper-comp-basket">
           <a href="blank.html" class="compare sans">
@@ -161,12 +159,16 @@
                   </a>
                 </div>
                 <div class="decorate-arrow">
-                  <svg class="up-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 4L3 4L8.5 14L14 4Z" fill="black" />
-                  </svg>
-                  <svg class="down-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 4L3 4L8.5 14L14 4Z" fill="black" />
-                  </svg>
+                  <a href="blank.html" class="up-arrow-link">
+                    <svg class="up-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 4L3 4L8.5 14L14 4Z" fill="black" />
+                    </svg>
+                  </a>
+                  <a href="blank.html" class="down-arrow-link">
+                    <svg class="down-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 4L3 4L8.5 14L14 4Z" fill="black" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -251,7 +253,7 @@
                         <div class="bg"></div>
                         В корзину
                       </a>
-                      <button>Добавить к сравнению</button>
+                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
                     </div>
                   </div>
                   <div class="wrapper-name-price">
@@ -269,7 +271,7 @@
                         <div class="bg"></div>
                         В корзину
                       </a>
-                      <button>Добавить к сравнению</button>
+                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
                     </div>
                   </div>
                   <div class="wrapper-name-price">
@@ -287,7 +289,7 @@
                         <div class="bg"></div>
                         В корзину
                       </a>
-                      <button>Добавить к сравнению</button>
+                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
                     </div>
                   </div>
                   <div class="wrapper-name-price">
@@ -305,7 +307,7 @@
                         <div class="bg"></div>
                         В корзину
                       </a>
-                      <button>Добавить к сравнению</button>
+                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
                     </div>
                     <div class="new-item">
                       new

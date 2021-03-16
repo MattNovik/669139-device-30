@@ -302,7 +302,9 @@ img {
   line-height: 20px;
   cursor: pointer;
 }
-
+.out-btn:hover {
+  opacity: .6;
+}
 .out-btn.visible {
   visibility: visible;
 }
@@ -1799,7 +1801,11 @@ img {
   width: 52px;
   height: 70px;
 }
-
+.up-arrow-link,
+.down-arrow-link {
+  display: flex;
+  align-items: center;
+}
 .up-arrow {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -2215,7 +2221,7 @@ img {
   z-index: 1;
 }
 
-.to-busket button {
+.to-busket .compare-link {
   border: none;
   outline: none;
   background: none;
@@ -2228,11 +2234,11 @@ img {
   letter-spacing: .1em;
 }
 
-.to-busket button:hover {
+.to-busket .compare-link:hover {
   opacity: 1;
 }
 
-.to-busket button:focus {
+.to-busket .compare-link:focus {
   opacity: .2;
 }
 
