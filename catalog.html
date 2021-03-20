@@ -15,11 +15,12 @@
 <body class="body">
   <header class="header">
     <a href="index.html" class="logo">
-      <img src="img/index/header/-e-logo(1).svg" alt="company-logo" width="164" height="35" class="header-logo">
+      <img src="img/index/header/header-logo.svg" alt="company-logo" width="164" height="35" class="header-logo">
     </a>
     <h1 class="non-visible-element">Техника для съёмки</h1>
     <div class="wrapper-top-header">
       <form action="get" class="search">
+          <label for="search" class="non-visible-element"></label>
           <input type="search" id="search" placeholder="Поиск по сайту" class="sans">
           <span class="decorate-icon"></span>
           <button class="search-btn">Найти</button>
@@ -118,9 +119,9 @@
   </header>
   <main>
     <section class="product">
-      <h1 class="monopods">
+      <h2 class="monopods">
         Моноподы для селфи
-      </h1>
+      </h2>
       <div class="steps">
         <a href="index.html" class="sans">
           Главная
@@ -178,44 +179,46 @@
           <div class="wrapper-product-sort-filter product-sort-filter">
             <div class="filter">
               <form class="criteria">
-                <legend class="price small-gilroy">Стоимость
-                </legend>
-                <div class="price-range">
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar"></div>
+                <fieldset class="sort-by-price">
+                  <legend class="price small-gilroy">Стоимость
+                  </legend>
+                  <div class="price-range">
+                    <div class="range-controls">
+                      <div class="scale">
+                        <div class="bar"></div>
+                      </div>
+                      <div class="toggle toggle-min" tabindex="0"></div>
+                      <div class="toggle toggle-max" tabindex="0"></div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0"></div>
-                    <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
-                </div>
-                <div class="price-min-max small-gilroy">
-                  <label for="pirce-min">от</label>
-                  <input type="number" class="price-min" id="price-min" value="0">
-                  <label for="pirce-max">до</label>
-                  <input type="number" class="price-max" id="price-max" value="5000">
-                </div>
+                  <div class="price-min-max small-gilroy">
+                    <label for="price-min">от</label>
+                    <input aria-label="make sort min price" type="number" class="price-min" id="price-min" value="0">
+                    <label for="price-max">до</label>
+                    <input aria-label="make sort max price" type="number" class="price-max" id="price-max" value="5000">
+                  </div>
+                </fieldset>
                 <fieldset class="by-color">
                   <legend class="color small-gilroy">Цвет</legend>
                   <ul class="color-choice sans">
                     <li>
-                      <input type="checkbox" id="black" name="black" value="black-color" class="color-check color-black" checked>
+                      <input type="checkbox" id="black" name="black" value="black-color" class="color-check color-black non-visible-element" checked>
                       <label for="black">Черный</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="white" name="white" value="white-color" class="color-check color-white">
+                      <input type="checkbox" id="white" name="white" value="white-color" class="color-check color-white non-visible-element">
                       <label for="white">Белый</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-check color-blue" checked>
+                      <input type="checkbox" id="blue" name="blue" value="blue-color" class="color-check color-blue non-visible-element" checked>
                       <label for="blue">Синий</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="red" name="red" value="red-color" class="color-check color-red" checked>
+                      <input type="checkbox" id="red" name="red" value="red-color" class="color-check color-red non-visible-element" checked>
                       <label for="red">Красный</label>
                     </li>
                     <li>
-                      <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-check color-pink">
+                      <input type="checkbox" id="pink" name="pink" value="pink-color" class="color-check color-pink non-visible-element">
                       <label for="pink">Розовый</label>
                     </li>
                   </ul>
@@ -224,11 +227,11 @@
                   <legend class="bluetooth small-gilroy">Bluetooth</legend>
                   <ul class="bluetooth-choice sans">
                     <li>
-                      <input type="radio" class="bluetooth-check bluetooth-yes" name="yes-no" value="yes" id="yes" checked>
+                      <input type="radio" class="bluetooth-check bluetooth-yes non-visible-element" name="yes-no" value="yes" id="yes" checked>
                       <label for="yes" class="sans">Есть</label>
                     </li>
                     <li>
-                      <input type="radio" class="bluetooth-check bluetooth-no" name="yes-no" value="no" id="no">
+                      <input type="radio" class="bluetooth-check bluetooth-no non-visible-element" name="yes-no" value="no" id="no">
                       <label for="no" class="sans">Нет</label>
                     </li>
                   </ul>
@@ -248,10 +251,10 @@
                   <div class="wrapper-item">
                     <img src="img/catalog/main/item-11res.png" alt="first item" width="360" height="380" class="item-img">
                     <div class="to-busket">
-                      <a href="#" class="to-busket-link bg">
+                      <div  class="to-busket-link bg">
                         В корзину
-                      </a>
-                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
+                      </div>
+                      <div class="compare-link">Добавить к сравнению</div>
                     </div>
                   </div>
                   <div class="wrapper-name-price">
@@ -263,12 +266,12 @@
               <div class="second-product">
                 <a href="blank.html">
                   <div class="wrapper-item">
-                    <img src="img/catalog/main/item-21(res).png" alt="second item" width="360" height="380" class="item-img">
+                    <img src="img/catalog/main/item-21res.png" alt="second item" width="360" height="380" class="item-img">
                     <div class="to-busket">
-                      <a href="#" class="to-busket-link bg">
+                      <div class="to-busket-link bg">
                         В корзину
-                      </a>
-                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
+                      </div>
+                      <div class="compare-link">Добавить к сравнению</div>
                     </div>
                   </div>
                   <div class="wrapper-name-price">
@@ -280,12 +283,12 @@
               <div class="third-product">
                 <a href="blank.html">
                   <div class="wrapper-item">
-                    <img src="img/catalog/main/item-31(1es).png" alt="third item" width="360" height="380" class="item-img">
+                    <img src="img/catalog/main/item-311es.png" alt="third item" width="360" height="380" class="item-img">
                     <div class="to-busket">
-                      <a href="#" class="to-busket-link bg">
+                      <div class="to-busket-link bg">
                         В корзину
-                      </a>
-                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
+                      </div>
+                      <div class="compare-link">Добавить к сравнению</div>
                     </div>
                   </div>
                   <div class="wrapper-name-price">
@@ -297,12 +300,12 @@
               <div class="fourth-product">
                 <a href="blank.html">
                   <div class="wrapper-item">
-                    <img src="img/catalog/main/item-41(res).png" alt="fourth item" width="360" height="380" class="item-img">
+                    <img src="img/catalog/main/item-41res.png" alt="fourth item" width="360" height="380" class="item-img">
                     <div class="to-busket">
-                      <a href="#" class="to-busket-link bg">
+                      <div class="to-busket-link bg">
                         В корзину
-                      </a>
-                      <a href="blank.html" class="compare-link">Добавить к сравнению</a>
+                      </div>
+                      <div class="compare-link">Добавить к сравнению</div>
                     </div>
                     <div class="new-item">
                       new
@@ -378,7 +381,7 @@
           </a>
         </li>
       </ul>
-      <a href="+74954959595" class="telephone sans">Тел.: +7 (495) 495-95-95</a>
+      <a href="tel:+74954959595" class="telephone sans" >Тел.: +7 (495) 495-95-95</a>
     </div>
     <div class="bottom-footer">
       <div class="social">
