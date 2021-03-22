@@ -39,7 +39,7 @@ modalClose.addEventListener("click", function (evt) {
 });
 
 modalForm.addEventListener("submit", function (evt) {
-  if (!modalName.value || !modalEmail.value) {
+  if (!modalName.value || !modalEmail.value || modalTextmail.value) {
     evt.preventDefault();
     modalPopup.classList.remove("modal-error");
     modalPopup.offsetWidth = modalPopup.offsetWidth;
